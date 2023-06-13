@@ -1,0 +1,35 @@
+.custom-button {
+    border: none;
+    color: var(--primary-black);
+    padding: 1rem 1.3rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    background-color: var(--primary-white);
+    text-align: center;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: .9rem;
+}
+
+.custom-button:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.hero-header-button {
+    width: 15%;
+}
+
+.hero-text-button {
+    background-color: var(--secondary-green);
+    color: var(--primary-white);
+    width: 40%;
+}
+
+.purchase-button {
+    color: var(--primary-green);
+    opacity: 80%;
+}
+
+.purchase-button:hover {
+    opacity: 100%;
+}

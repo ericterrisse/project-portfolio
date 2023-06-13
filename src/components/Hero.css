@@ -1,0 +1,113 @@
+.hero-background {
+  background: linear-gradient(to bottom right, var(--secondary-green), var(--primary-green));
+  height: 100dvh;
+  background-size: cover;
+  background-repeat: none;
+  z-index: -10;
+}
+
+.hero-section {
+  background-image: url("../assets/images/background.svg");
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 2rem 0;
+}
+
+.hero-header h1 {
+  color: var(--primary-white);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  margin-left: calc(10% + 2rem);
+}
+
+.hero-nav a {
+  text-decoration: none;
+  color: var(--primary-white);
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+}
+
+.hero-nav a:hover {
+  cursor: pointer;
+}
+
+
+.hero-nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--primary-white);
+    transition: color 0.3s ease-in-out;
+}
+
+.hero-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -.4rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary-white);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.card-header .hero-nav li:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.card-header .hero-nav .line {
+    height: 60%;
+    width: 2px;
+    background-color: var(--primary-white);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: var(--primary-white);
+}
+
+.hero-text p {
+  color: var(--primary-white);
+  width: 60%;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.7rem;
+}
