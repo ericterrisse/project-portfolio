@@ -1,5 +1,6 @@
 import "./Projects.css";
 import { ProjectCard } from "./";
+import animations from "../animations";
 import {
 	appati,
 	frontalpati,
@@ -8,6 +9,9 @@ import {
 	xproof_app,
 	xproof_web,
 } from "../assets/images";
+
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const projects = [
 	{
@@ -35,16 +39,42 @@ const projects = [
 ];
 
 const Projects = () => {
+	const ref = useRef(null);
+	const isInView = useInView(ref);
+	const mainControls = useAnimation();
+
+	useEffect(() => {
+		console.log(isInView);
+		if (isInView) {
+			mainControls.start("animate");
+		}
+		if (!isInView) {
+			mainControls.start("initial");
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isInView]);
+
 	return (
-		<div id="projects" className="projects-section">
-			<h1>SOME OF MY PREVIOUS WORK & PROJECTS</h1>
-			<p>
+		<div ref={ref} id="projects" className="projects-section">
+			<motion.h1
+				ref={ref}
+				variants={animations.title}
+				initial="initial"
+				animate={mainControls}
+			>
+				SOME OF MY PREVIOUS WORK & PROJECTS
+			</motion.h1>
+			<motion.p
+			variants={animations.subtitle}
+			initial="initial"
+			animate={mainControls}
+			>
 				Click on the name to read more, click on the arrow to see the
 				product
-			</p>
+			</motion.p>
 			<div id="projects" className="projects-container">
 				{projects.map((proj, index) => (
-					<ProjectCard key={index} project={proj} />
+					<ProjectCard key={index} project={proj} isInView={isInView} />
 				))}
 			</div>
 		</div>

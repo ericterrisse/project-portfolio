@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./PricingCard.css";
 import { CustomButton } from "./";
 
+import animations from "../animations";
+import { motion, useAnimation, useInView } from "framer-motion";
+
 const PricingCard = ({ packageProps, index }) => {
 	const { title, price, properties } = packageProps;
+
+	const ref = useRef(null);
+	const isInView = useInView(ref);
+	const mainControls = useAnimation();
+
+	useEffect(() => {
+		console.log(isInView);
+		if (isInView) {
+			mainControls.start("animate");
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isInView]);
+
 	return (
-		<div className="pricing-card">
+		<motion.div
+			ref={ref}
+			variants={animations.pricingCard}
+			initial="initial"
+			animate={mainControls}
+			className="pricing-card"
+		>
 			<div className="overlay">#{index}</div>
 			<h2>{title}</h2>
 			<div className="pricing-card-price">
@@ -23,7 +45,7 @@ const PricingCard = ({ packageProps, index }) => {
 				title="PURCHASE NOW"
 				classname="purchase-button"
 			/>
-		</div>
+		</motion.div>
 	);
 };
 

@@ -31,29 +31,13 @@ export default {
 			},
 		},
 	},
-	heroBlobs: {
+	title: {
 		initial: {
-			scale: .5,
-		},
-		animate: {
-			scale: 1,
-			transition: {
-				ease: "easeInOut",
-				duration: 0.5,
-				delay: 0.5,
-				type: "spring",
-				stiffness: 200,
-				damping: 20,
-			},
-		},
-	},
-	content: {
-		initial: {
-			x: -100,
+			y: -50,
 			opacity: 0,
 		},
 		animate: {
-			x: 0,
+			y: 0,
 			opacity: 1,
 			transition: {
 				ease: "easeInOut",
@@ -63,19 +47,64 @@ export default {
 			},
 		},
 	},
-	imageCard: {
-		hidden: { x: -200, opacity: 0 },
-		visible: (i) => ({
-			x: 0,
+	subtitle: {
+		initial: {
+			scale: 0,
+			opacity: 0,
+		},
+		animate: {
+			scale: 1,
 			opacity: 1,
 			transition: {
-				delay: i * 0.2,
 				ease: "easeInOut",
 				duration: 0.5,
 				type: "spring",
-				stiffness: 200,
-				damping: 20,
 			},
-		}),
+		},
+	},
+	pricingCard: {
+		initial: {
+			scale: 0,
+			opacity: 0,
+		},
+		animate: {
+			scale: 1,
+			opacity: 1,
+			transition: {
+				ease: "easeInOut",
+				duration: 0.5,
+				type: "spring",
+			},
+		},
+	},
+	projectText: {
+		initial: {
+			x: -700,
+			opacity: 0,
+		},
+		animate: {
+			x: 0,
+			opacity: 1,
+			transition: {
+				ease: "easeInOut",
+				duration: 0.5,
+				type: "spring",
+			},
+		},
+	},
+	projectImg: {
+		initial: {
+			x: 700,
+			opacity: 0,
+		},
+		animate: {
+			x: 0,
+			opacity: 1,
+			transition: {
+				ease: "easeInOut",
+				duration: 0.5,
+				type: "spring",
+			},
+		},
 	},
 };

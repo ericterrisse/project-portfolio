@@ -41,27 +41,36 @@ const packages = [
 const Pricing = () => {
 	const ref = useRef(null);
 	const isInView = useInView(ref);
-
 	const mainControls = useAnimation();
 
 	useEffect(() => {
-		console.log(isInView)
+		console.log(isInView);
 		if (isInView) {
-		  mainControls.start("animate");
+			mainControls.start("animate");
+		}
+		if (!isInView) {
+			mainControls.start("initial");
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	  }, [isInView]);
+	}, [isInView]);
 
 	return (
-		<div ref={ref} id="packages" className="pricing-section">
+		<div id="packages" className="pricing-section">
 			<motion.h1
-				variants={animations.content}
+				ref={ref}
+				variants={animations.title}
 				initial="initial"
 				animate={mainControls}
 			>
 				SELECT YOUR PACKAGE
 			</motion.h1>
-			<p>Choose the package that best suits you, click to read more</p>
+			<motion.p
+				variants={animations.subtitle}
+				initial="initial"
+				animate={mainControls}
+			>
+				Choose the package that best suits you, click to read more
+			</motion.p>
 			<div className="pricing-cards">
 				{packages.map((packageProps, index) => (
 					<PricingCard
