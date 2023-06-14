@@ -1,12 +1,21 @@
 import "./CustomButton.css";
+import { motion } from "framer-motion";
 
 const CustomButton = ({ title, classname, href }) => {
 	return (
-		<a href={`#${href}`}
+		<motion.a
+			initial={{ opacity: 0.6 }}
+			whileHover={{
+				scale: 1.1,
+				transition: { duration: .5 },
+			}}
+			whileTap={{ scale: 0.9 }}
+			whileInView={{ opacity: 1 }}
+			href={`#${href}`}
 			className={`custom-button ${classname}`}
 		>
 			{title}
-		</a>
+		</motion.a>
 	);
 };
 
