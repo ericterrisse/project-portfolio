@@ -1,5 +1,9 @@
 import "./Pricing.css";
 import { PricingCard } from "./";
+import animations from "../animations";
+
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const packages = [
 	{
@@ -35,13 +39,36 @@ const packages = [
 ];
 
 const Pricing = () => {
+	const ref = useRef(null);
+	const isInView = useInView(ref);
+
+	const mainControls = useAnimation();
+
+	useEffect(() => {
+		console.log(isInView)
+		if (isInView) {
+		  mainControls.start("animate");
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	  }, [isInView]);
+
 	return (
-		<div id="packages" className="pricing-section">
-			<h1>SELECT YOUR PACKAGE</h1>
+		<div ref={ref} id="packages" className="pricing-section">
+			<motion.h1
+				variants={animations.content}
+				initial="initial"
+				animate={mainControls}
+			>
+				SELECT YOUR PACKAGE
+			</motion.h1>
 			<p>Choose the package that best suits you, click to read more</p>
 			<div className="pricing-cards">
 				{packages.map((packageProps, index) => (
-					<PricingCard key={index} packageProps={packageProps} index={index+1} />
+					<PricingCard
+						key={index}
+						packageProps={packageProps}
+						index={index + 1}
+					/>
 				))}
 			</div>
 		</div>

@@ -36,9 +36,12 @@ const projects = [
 
 const Projects = () => {
 	return (
-		<div className="projects-section">
+		<div id="projects" className="projects-section">
 			<h1>SOME OF MY PREVIOUS WORK & PROJECTS</h1>
-			<p>Click on the name to read more, click on the arrow to see the product</p>
+			<p>
+				Click on the name to read more, click on the arrow to see the
+				product
+			</p>
 			<div id="projects" className="projects-container">
 				{projects.map((proj, index) => (
 					<ProjectCard key={index} project={proj} />

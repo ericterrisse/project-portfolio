@@ -40,7 +40,8 @@ h6,
 p,
 li,
 button,
-a {
+a,
+span {
   font-family: "Noto Sans TC", sans-serif;
   text-decoration: none;
 }

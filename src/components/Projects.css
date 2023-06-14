@@ -1,4 +1,4 @@
-.projects-section{
+.projects-section {
     background-color: var(--primary-white);
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
 .project-card {
     display: flex;
     justify-content: space-between;
-    margin: 0 20rem;
+    width: 1280px;
     gap: 115px;
 }
 
@@ -43,7 +43,7 @@
 
 .project-text-header a {
     color: var(--primary-black);
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .project-text-header a:hover {
@@ -94,4 +94,11 @@
     padding: 7px 0;
     border-radius: 1rem;
     box-shadow: 10px 10px 2rem rgba(0, 136, 108, 0.5);
+    animation: bounce 10s infinite;
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-20px);
+    }
 }

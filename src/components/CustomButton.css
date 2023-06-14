@@ -10,11 +10,6 @@
     font-size: .9rem;
 }
 
-.custom-button:hover {
-    cursor: pointer;
-    opacity: 80%;
-}
-
 .hero-header-button {
     width: 15%;
 }
@@ -27,9 +22,4 @@
 
 .purchase-button {
     color: var(--primary-green);
-    opacity: 80%;
-}
-
-.purchase-button:hover {
-    opacity: 100%;
 }

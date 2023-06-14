@@ -1,4 +1,4 @@
-import { Hero, Pricing, Projects } from "./components";
+import { Hero, Pricing, Projects, About, Slider, Contact } from "./components";
 
 const App = () => {
 	return (
@@ -6,6 +6,9 @@ const App = () => {
 			<Hero />
 			<Pricing />
 			<Projects />
+			<Slider />
+			<About />
+			<Contact />
 		</div>
 	);
 };
