@@ -1,10 +1,12 @@
 import "./Contact.css";
+import "./CustomButton.css";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { HiLocationMarker } from "react-icons/hi";
 
 import { useRef } from "react";
 import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
 
 const Contact = () => {
 	const ref = useRef(null);
@@ -114,7 +116,19 @@ const Contact = () => {
 						</p>
 					)}
 
-					<button type="submit">SEND</button>
+					<motion.button
+						initial={{ opacity: 0.6 }}
+						whileHover={{
+							scale: 1.1,
+							transition: { duration: 0.5 },
+						}}
+						whileTap={{ scale: 0.9 }}
+						whileInView={{ opacity: 1 }}
+						className="custom-button"
+						type="submit"
+					>
+						SEND
+					</motion.button>
 				</form>
 			</div>
 		</div>
