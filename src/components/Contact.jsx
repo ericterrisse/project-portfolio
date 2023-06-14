@@ -1,5 +1,5 @@
 import "./Contact.css";
-import "./CustomButton.css";
+import "../Customs/CustomButton.css";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { HiLocationMarker } from "react-icons/hi";

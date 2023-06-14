@@ -1,5 +1,5 @@
 import "./Projects.css";
-import { ProjectCard } from "./";
+import { ProjectCard } from "../Cards";
 import animations from "../animations";
 import {
 	appati,
@@ -11,7 +11,8 @@ import {
 } from "../assets/images";
 
 import { useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useAnimation, useInView } from "framer-motion";
+import {CustomTitle} from "../Customs";
 
 const projects = [
 	{
@@ -56,25 +57,21 @@ const Projects = () => {
 
 	return (
 		<div ref={ref} id="projects" className="projects-section">
-			<motion.h1
-				ref={ref}
-				variants={animations.title}
-				initial="initial"
-				animate={mainControls}
-			>
-				SOME OF MY PREVIOUS WORK & PROJECTS
-			</motion.h1>
-			<motion.p
-			variants={animations.subtitle}
-			initial="initial"
-			animate={mainControls}
-			>
-				Click on the name to read more, click on the arrow to see the
-				product
-			</motion.p>
+			<CustomTitle
+				title={"SOME OF MY PREVIOUS WORK & PROJECTS"}
+				subtitle={
+					"Click on the name to read more, click on the arrow to see the product"
+				}
+				isInView={isInView}
+				refProp={ref}
+			/>
 			<div id="projects" className="projects-container">
 				{projects.map((proj, index) => (
-					<ProjectCard key={index} project={proj} isInView={isInView} />
+					<ProjectCard
+						key={index}
+						project={proj}
+						isInView={isInView}
+					/>
 				))}
 			</div>
 		</div>

@@ -1,7 +1,7 @@
-import CustomButton from "./CustomButton";
 import "./Hero.css";
-import animations from "../animations"
+import animations from "../animations";
 import { motion } from "framer-motion";
+import { CustomButton } from "../Customs";
 
 import { BsArrowDownShort } from "react-icons/bs";
 

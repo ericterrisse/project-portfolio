@@ -1,4 +1,4 @@
-import "./Projects.css";
+import "../components/Projects.css";
 import { BsArrowUpRight } from "react-icons/bs";
 import animations from "../animations";
 
@@ -17,7 +17,6 @@ const ProjectCard = ({ project, isInView }) => {
 		if (!isInView) {
 			mainControls.start("initial");
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isInView]);
 
 	return (

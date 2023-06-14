@@ -1,4 +1,5 @@
-import { Hero, Pricing, Projects, About, Slider, Contact } from "./components";
+import { Hero, Pricing, Projects, About, Contact } from "./components";
+import {Slider} from "./Customs"
 
 const App = () => {
 	return (

@@ -1,6 +1,6 @@
 import "./Pricing.css";
-import { PricingCard } from "./";
-import animations from "../animations";
+import { PricingCard } from "../Cards";
+import {CustomTitle} from "../Customs";
 
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -55,22 +55,14 @@ const Pricing = () => {
 	}, [isInView]);
 
 	return (
-		<div id="packages" className="pricing-section">
-			<motion.h1
-				ref={ref}
-				variants={animations.title}
-				initial="initial"
-				animate={mainControls}
-			>
-				SELECT YOUR PACKAGE
-			</motion.h1>
-			<motion.p
-				variants={animations.subtitle}
-				initial="initial"
-				animate={mainControls}
-			>
-				Choose the package that best suits you, click to read more
-			</motion.p>
+		<div ref={ref} id="packages" className="pricing-section">
+			<CustomTitle
+				title={"SOME OF MY PREVIOUS WORK & PROJECTS"}
+				subtitle={
+					"Click on the name to read more, click on the arrow to see the product"
+				}
+				isInView={isInView}
+			/>
 			<div className="pricing-cards">
 				{packages.map((packageProps, index) => (
 					<PricingCard

@@ -20,7 +20,7 @@
     flex-direction: column;
     gap: 30rem;
     background-color: var(--primary-white);
-    margin: 17rem 0;
+    margin: 17rem 0 10rem 0;
 }
 
 .project-card {

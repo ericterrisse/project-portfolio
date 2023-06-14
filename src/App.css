@@ -10,6 +10,7 @@
   --primary-black: #00252b;
 
   scroll-behavior: smooth;
+  background-color: var(--primary-white);
 }
 
 .general-container {

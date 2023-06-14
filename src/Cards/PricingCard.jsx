@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import "./PricingCard.css";
-import { CustomButton } from "./";
+import { CustomButton } from "../Customs";
 
 import animations from "../animations";
 import { motion, useAnimation, useInView } from "framer-motion";

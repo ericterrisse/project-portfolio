@@ -1,5 +1,4 @@
 import "./About.css";
-import { Slider } from "./";
 import { desk } from "../assets/images";
 import { BsArrowUpRight } from "react-icons/bs";
 
