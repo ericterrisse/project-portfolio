@@ -3,7 +3,7 @@ import { PricingCard } from "../Cards";
 import {CustomTitle} from "../Customs";
 
 import { useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useAnimation, useInView } from "framer-motion";
 
 const packages = [
 	{

@@ -47,36 +47,6 @@ export default {
 			},
 		},
 	},
-	subtitle: {
-		initial: {
-			scale: 0,
-			opacity: 0,
-		},
-		animate: {
-			scale: 1,
-			opacity: 1,
-			transition: {
-				ease: "easeInOut",
-				duration: 0.5,
-				type: "spring",
-			},
-		},
-	},
-	pricingCard: {
-		initial: {
-			scale: 0,
-			opacity: 0,
-		},
-		animate: {
-			scale: 1,
-			opacity: 1,
-			transition: {
-				ease: "easeInOut",
-				duration: 0.5,
-				type: "spring",
-			},
-		},
-	},
 	projectText: {
 		initial: {
 			x: -700,
@@ -99,6 +69,21 @@ export default {
 		},
 		animate: {
 			x: 0,
+			opacity: 1,
+			transition: {
+				ease: "easeInOut",
+				duration: 0.5,
+				type: "spring",
+			},
+		},
+	},
+	fromScaleZero: {
+		initial: {
+			scale: 0,
+			opacity: 0,
+		},
+		animate: {
+			scale: 1,
 			opacity: 1,
 			transition: {
 				ease: "easeInOut",

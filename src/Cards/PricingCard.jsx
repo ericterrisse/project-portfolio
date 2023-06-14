@@ -23,7 +23,7 @@ const PricingCard = ({ packageProps, index }) => {
 	return (
 		<motion.div
 			ref={ref}
-			variants={animations.pricingCard}
+			variants={animations.fromScaleZero}
 			initial="initial"
 			animate={mainControls}
 			className="pricing-card"

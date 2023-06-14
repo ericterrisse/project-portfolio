@@ -1,15 +1,31 @@
 import "./Contact.css";
 import "../Customs/CustomButton.css";
+import { CustomTitle } from "../Customs";
+import animations from "../animations";
+
+import { useEffect } from "react";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { HiLocationMarker } from "react-icons/hi";
-
 import { useRef } from "react";
 import { useForm } from "react-hook-form";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Contact = () => {
 	const ref = useRef(null);
+	const isInView = useInView(ref);
+	const mainControls = useAnimation();
+
+	useEffect(() => {
+		console.log(isInView);
+		if (isInView) {
+			mainControls.start("animate");
+		}
+		if (!isInView) {
+			mainControls.start("initial");
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isInView]);
 
 	const {
 		register,
@@ -25,8 +41,12 @@ const Contact = () => {
 	};
 
 	return (
-		<div id="contact" className="contact-section">
-			<h1>CONTACT ME VIA EMAIL OR MESSAGE</h1>
+		<div ref={ref} id="contact" className="contact-section">
+			<CustomTitle
+				title={"CONTACT ME VIA EMAIL OR MESSAGE"}
+				subtitle={""}
+				isInView={isInView}
+			/>
 			<div className="wrapper">
 				<p>Sit down, relax, and let's discuss your</p>
 				<div className="words">
@@ -37,7 +57,12 @@ const Contact = () => {
 					<span>goals</span>
 				</div>
 			</div>
-			<div className="contact-card">
+			<motion.div
+				className="contact-card"
+				variants={animations.fromScaleZero}
+				initial="initial"
+				animate={mainControls}
+			>
 				<div className="contact-info">
 					<div className="contact-info-phone">
 						<AiOutlineWhatsApp size={40} />
@@ -130,7 +155,7 @@ const Contact = () => {
 						SEND
 					</motion.button>
 				</form>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

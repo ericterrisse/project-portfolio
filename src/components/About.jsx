@@ -25,18 +25,18 @@ const About = () => {
 						<br /> I am very outgoing and ready to take on new
 						challenges, this has led me to teaching and mentoring
 						python based projects at my high school as well as
-						introducing me to the programming world, which has
-						derived into two main branches; web development and algorithm
-						designing.
+						joining hackathons with a team. These years of learning
+						have resulted in two main branches; web development and
+						algorithm designing.
 						<br /> These two skills have been the base for
 						discovering my passion, coding solutions for people's
 						problems. I enjoy coming up with creative ideas to solve
-						issues. <br /> When I am offline, I have been a roller
-						hockey player for 11 years and I have played the piano
-						since I was 4, among a lot of other activities I love
-						doing. I have studied abroad multiple times and I love
-						to travel, this has forged my social personality and
-						ability to adapt.
+						different issues. <br /> When I am offline, I have been
+						a roller hockey player for 11 years and I have played
+						the piano since I was 4, among a lot of other activities
+						I love doing. I have studied abroad multiple times and I
+						love to travel, this has forged my social personality
+						and ability to adapt.
 						<br /> I look forward getting to know you and get to
 						solutions for your problems through code.
 						<br /> Let's <a href="#contact">get in touch</a>!

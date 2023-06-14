@@ -1,4 +1,4 @@
-import "./CustomTitle.css"
+import "./CustomTitle.css";
 import animations from "../animations";
 
 import { useEffect } from "react";
@@ -26,13 +26,15 @@ const CustomTitle = ({ title, subtitle, isInView }) => {
 			>
 				{title}
 			</motion.h1>
-			<motion.p
-				variants={animations.subtitle}
-				initial="initial"
-				animate={mainControls}
-			>
-				{subtitle}
-			</motion.p>
+			{subtitle !== "" && (
+				<motion.p
+					variants={animations.fromScaleZero}
+					initial="initial"
+					animate={mainControls}
+				>
+					{subtitle}
+				</motion.p>
+			)}
 		</>
 	);
 };
