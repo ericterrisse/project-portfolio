@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin: 2rem 0 5rem 0;
+    margin: 2rem 3rem 5rem 3rem;
 }
 
 .contact-section h1 {
@@ -61,7 +61,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1000px;
     box-shadow: 10px 10px 2rem rgba(0, 136, 108, 0.5);
     margin-top: 2rem;
 }
@@ -166,4 +165,27 @@
 form p {
     margin: -2.5rem 0 -1.5rem;
     color: 	#808080;
+}
+
+@media (max-width: 1300px) {
+    .contact-card {
+        flex-direction: column;
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .contact-info {
+        gap: 2rem;
+    }
+
+    .contact-card form {
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        margin: 3rem 0 0 0;
+    }
 }

@@ -1,5 +1,5 @@
 import "./About.css";
-import { desk } from "../assets/images";
+import { desk } from "../assets";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const About = () => {

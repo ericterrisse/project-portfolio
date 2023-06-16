@@ -7,14 +7,15 @@
 }
 
 .hero-section {
-  background-image: url("../assets/images/background.svg");
+  background-image: url("../assets/background.png");
   top: 0;
-  left: 0;
+  right: 0;
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 
   display: flex;
   flex-direction: column;
@@ -28,7 +29,6 @@
   justify-content: space-between;
   width: 90%;
   margin: 2rem 0;
-
 }
 
 .hero-header h1 {
@@ -122,6 +122,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateY(0);
@@ -129,5 +130,30 @@
 
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 1300px) {
+  .hero-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-header-button {
+    display: none;
+  }
+
+  .hero-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-header h1 {
+    font-size: 4rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
   }
 }

@@ -18,7 +18,7 @@ const CustomTitle = ({ title, subtitle, isInView }) => {
 	}, [isInView]);
 
 	return (
-		<>
+		<div className="custom-title">
 			<motion.h1
 				variants={animations.title}
 				initial="initial"
@@ -35,7 +35,7 @@ const CustomTitle = ({ title, subtitle, isInView }) => {
 					{subtitle}
 				</motion.p>
 			)}
-		</>
+		</div>
 	);
 };
 

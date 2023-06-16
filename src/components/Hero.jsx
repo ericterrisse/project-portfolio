@@ -17,7 +17,6 @@ const Hero = () => {
 				>
 					<h1>ET</h1>
 					<nav className="hero-nav">
-						<a href="#packages">PACKAGES</a>
 						<a href="#projects">PROJECTS</a>
 						<a href="#about">ABOUT</a>
 					</nav>

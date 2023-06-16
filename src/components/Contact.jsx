@@ -73,7 +73,7 @@ const Contact = () => {
 					</div>
 					<div className="contact-info-email">
 						<MdEmail size={40} />
-						<p>eterrissebordas@gmail.com</p>
+						<p>contact@ericterrisse.com</p>
 					</div>
 					<div className="contact-info-location">
 						<HiLocationMarker size={40} />
@@ -86,7 +86,7 @@ const Contact = () => {
 				<form
 					target="_blank"
 					onSubmit={onSubmit}
-					action="https://formsubmit.co/75de06c1ac2c1a24c58cf854fc38afe8"
+					action="https://formsubmit.co/5f81b26a81be1cf3948af600f35e8721"
 					method="POST"
 				>
 					<input

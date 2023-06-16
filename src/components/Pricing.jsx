@@ -8,7 +8,7 @@ import { useAnimation, useInView } from "framer-motion";
 const packages = [
 	{
 		title: "PERSONAL",
-		price: 150,
+		price: 400,
 		properties: {
 			0: "3 pages design",
 			1: "3 color palette",
@@ -18,7 +18,7 @@ const packages = [
 	},
 	{
 		title: "CEO",
-		price: 300,
+		price: 700,
 		properties: {
 			0: "5 pages design",
 			1: "6 color palette",
@@ -28,7 +28,7 @@ const packages = [
 	},
 	{
 		title: "COORDINATOR",
-		price: 1200,
+		price: 3500,
 		properties: {
 			0: "Control dashboard",
 			1: "7 workers",
@@ -57,9 +57,9 @@ const Pricing = () => {
 	return (
 		<div ref={ref} id="packages" className="pricing-section">
 			<CustomTitle
-				title={"SOME OF MY PREVIOUS WORK & PROJECTS"}
+				title={"PACKAGES"}
 				subtitle={
-					"Click on the name to read more, click on the arrow to see the product"
+					"Click to read more, PURCHASE NOW to message me"
 				}
 				isInView={isInView}
 			/>

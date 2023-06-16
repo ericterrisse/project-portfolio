@@ -5,7 +5,6 @@ const App = () => {
 	return (
 		<div>
 			<Hero />
-			<Pricing />
 			<Projects />
 			<Slider />
 			<About />

@@ -1,6 +1,5 @@
 import "./Projects.css";
 import { ProjectCard } from "../Cards";
-import animations from "../animations";
 import {
 	appati,
 	frontalpati,
@@ -8,7 +7,7 @@ import {
 	students,
 	xproof_app,
 	xproof_web,
-} from "../assets/images";
+} from "../assets";
 
 import { useEffect, useRef } from "react";
 import { useAnimation, useInView } from "framer-motion";
