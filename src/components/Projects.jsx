@@ -7,6 +7,9 @@ import {
 	students,
 	xproof_app,
 	xproof_web,
+	desktopHoqueiApp,
+	mobileHoqueiApp,
+	hoqueiImage,
 } from "../assets";
 
 import { useEffect, useRef } from "react";
@@ -14,6 +17,17 @@ import { useAnimation, useInView } from "framer-motion";
 import {CustomTitle} from "../Customs";
 
 const projects = [
+	{
+		name: "L'app de L'Hoquei",
+		title: "Tool developed to showcase information for Rink Hockey leagues",
+		text: "App developed to display matches, tableboards and statistics about the amateur and professional leagues of Rink Hockey in Catalonia and Spain.",
+		images: {
+			0: desktopHoqueiApp,
+			1: hoqueiImage,
+			2: mobileHoqueiApp,
+		},
+		link: "https://hoqueiapp.vercel.app/",
+	},
 	{
 		name: "Appati",
 		title: "Tool created to support a local sport: Pati Vela and monitor the regattas",

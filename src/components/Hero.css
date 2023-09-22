@@ -137,6 +137,10 @@
   .hero-nav {
     display: none;
   }
+
+  .hero-section {
+    background-attachment: scroll;
+  }
 }
 
 @media (max-width: 600px) {
