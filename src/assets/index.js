@@ -5,7 +5,7 @@ import xproof_web from "./xproof_web.png";
 import xproof_app from "./xproof_app.png";
 import students from "./students.jpg";
 import desk from "./desk.jpg";
-import mobileHoqueiApp from "./mobileHoqueiApp.jpeg";
+import mobileHoqueiApp from "./mobileHoqueiApp.png";
 import desktopHoqueiApp from "./desktopHoqueiApp.png";
 import hoqueiImage from "./hoqueiImage.png";
 
