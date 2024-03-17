@@ -8,6 +8,9 @@ import desk from "./desk.jpg";
 import mobileHoqueiApp from "./mobileHoqueiApp.png";
 import desktopHoqueiApp from "./desktopHoqueiApp.png";
 import hoqueiImage from "./hoqueiImage.png";
+import foto_xavi from "./foto_xavi.jpg";
+import frontal_adipav from "./frontal_adipav.png";
+import app_adipav from "./app_adipav.png";
 
 export {
 	appati,
@@ -20,4 +23,7 @@ export {
 	desktopHoqueiApp,
 	mobileHoqueiApp,
 	hoqueiImage,
+	foto_xavi,
+	frontal_adipav,
+	app_adipav,
 };

@@ -10,11 +10,14 @@ import {
 	desktopHoqueiApp,
 	mobileHoqueiApp,
 	hoqueiImage,
+	foto_xavi,
+	frontal_adipav,
+	app_adipav,
 } from "../assets";
 
 import { useEffect, useRef } from "react";
 import { useAnimation, useInView } from "framer-motion";
-import {CustomTitle} from "../Customs";
+import { CustomTitle } from "../Customs";
 
 const projects = [
 	{
@@ -30,7 +33,8 @@ const projects = [
 	},
 	{
 		name: "Appati",
-		title: "Tool created to support a local sport: Pati Vela and monitor the regattas",
+		title:
+			"Tool created to support a local sport: Pati Vela and monitor the regattas",
 		text: "A sailor and programmer from the Barcelona sailing club and I develop this tool to improve the way the regattas were being saved and displayed to the sailors.",
 		images: {
 			0: frontalpati,
@@ -40,8 +44,21 @@ const projects = [
 		link: "https://appati.pativelabarcelona.com/",
 	},
 	{
+		name: "Carnet ADIPAV",
+		title:
+			"Tool created to support ADIPAV: the organization that manages the Pati Vela clubs",
+		text: "Continuing with the Pati Vela projects, after talking with the organization that manages the Pati Vela clubs, we developed a software to manage the regattas and competitions around Europe.",
+		images: {
+			0: foto_xavi,
+			1: frontal_adipav,
+			2: app_adipav,
+		},
+		link: "https://carnet.adipav.org/",
+	},
+	{
 		name: "Xproof",
-		title: "Tool created to to revolutionize the education system from the practicality",
+		title:
+			"Tool created to to revolutionize the education system from the practicality",
 		text: "We are a team of three passioned programmers working towards a better experience in the school both for the professor and the student.",
 		images: {
 			0: xproof_web,
@@ -80,11 +97,7 @@ const Projects = () => {
 			/>
 			<div id="projects" className="projects-container">
 				{projects.map((proj, index) => (
-					<ProjectCard
-						key={index}
-						project={proj}
-						isInView={isInView}
-					/>
+					<ProjectCard key={index} project={proj} isInView={isInView} />
 				))}
 			</div>
 		</div>
