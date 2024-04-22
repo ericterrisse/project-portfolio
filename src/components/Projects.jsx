@@ -58,7 +58,7 @@ const projects = [
 	{
 		name: "Xproof",
 		title:
-			"Tool created to to revolutionize the education system from the practicality",
+			"Tool created to revolutionize the education system from the practicality",
 		text: "We are a team of three passioned programmers working towards a better experience in the school both for the professor and the student.",
 		images: {
 			0: xproof_web,
